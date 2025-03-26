@@ -1,61 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Js Biglietto Treno</title>
 </head>
+
 <body>
-    <h1> CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-    <div class="container">
+    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    <div class="container bg-light">
         <div class="col-12">
-            <form action = "">
+            <form action="">
                 <div class="row">
-                    <div class="col-4 mt-3">    
-                            <label for="eta">Nome Cognome</label>
-                            <input type="number" id="nome-cognome" class="form-control">
+                    <div class="col-4 mt-3">
+                        <label for="nome-cognome">Nome Cognome</label>
+                        <input type="text" id="nome-cognome" class="form-control" />
                     </div>
                     <div class="col-4 mt-3">
-                            <label for="eta">KM da percorrere</label>
-                            <input type="number" id="km" class="form-control">
+                        <label for="km-field">KM da percorrere</label>
+                        <input type="number" id="km-field" class="form-control" />
                     </div>
-                    <div class="col-4">    
-                        <p>Fascia d'età</p>              
-                        <select class="form-select mt-3" id="fascia-età" class="form-control">
-                            <option selected>Seleziona la tua fascia d'età</option>
+                    <div class="col-4 mt-3">
+                        <label>Fascia d'età</label>
+                        <select id="range-field" class="form-select" aria-label="Default select example">
+                            <option selected>Fascia d'età</option>
                             <option value="1">Minorenne</option>
                             <option value="2">Maggiorenne</option>
-                            <option value="3">Vecchissimo</option>
-                          </select>
+                            <option value="3">Over 65</option>
+                        </select>
                     </div>
-
-                    <div class="col-12 d-flex justify-content-center mt-5">
-                        <button id="button" class="btn btn-primary mx-2">Genera</button>
-                        <button id="button" class="btn btn-primary mx-2">Annulla</button>
+                    <div class="col-12 d-flex justify-content-center mt-5 mb-3">
+                        <button id="button1" class="btn btn-primary mx-2">Genera</button>
+                        <button id="button2" class="btn btn-primary mx-2">Annulla</button>
                     </div>
-
-
                 </div>
             </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-<script src = './script.js'> </script>
+
+    <h2 class="mt-3">IL TUO BIGLIETTO</h2>
+
+    <div class="container bg-light">
+        <div class="row">
+            <div class="card-header" id="passName">
+                DETTAGLIO PASSEGGERO
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <p>
+                            <span>Nome Passeggero</span>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <span>Offerta</span>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <span>Carrozza</span>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <span>Codice CP</span>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p class="font-weight-bold">
+                            <span>Costo Biglietto</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 offset-2 mt-3">   
+                        <p>
+                            <span id="offerta"></span>
+                        </p>
+                    </div>
+                    <div class="col-2 mt-3">
+                        <p>
+                            <span id="carrozza"></span>
+                        </p>
+                    </div>
+                    <div class="col-2 mt-3">
+                        <p>
+                            <span id="codice"></span>
+                        </p>
+                    </div>
+                    <div class="col-2 mt-3">
+                        <p>
+                            <span id="costo"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
